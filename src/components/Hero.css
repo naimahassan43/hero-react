@@ -1,4 +1,21 @@
-.hero-style img{
+@import url("https://fonts.googleapis.com/css2?family=Gugi&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gugi", cursive;
+}
+.main-page {
+  width: 90%;
+  height: 100vh;
+  margin: auto;
+}
+.main-page h1 {
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
+}
+.hero-style img {
   width: 200px;
   height: 200px;
 }
