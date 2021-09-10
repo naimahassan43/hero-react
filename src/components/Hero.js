@@ -13,7 +13,7 @@ const Hero = (props) => {
     },
     {
       id: 2,
-      fullname: "Rajon Chowdhury",
+      fullname: "Rajon Roy",
       name: "raki",
       work: "Graphic Designer",
     },
@@ -31,33 +31,21 @@ const Hero = (props) => {
     },
   ];
 
+  const arrayHeroCard = herolistArray.map((herocard, i) => {
+    return (
+      <Herolist
+        id={herolistArray[i].id}
+        fullname={herolistArray[i].fullname}
+        name={herolistArray[i].name}
+        work={herolistArray[i].work}
+      />
+    );
+  });
+
   return (
-    <div>
+    <div className="main-page">
       <h1>Welcome to Hero World</h1>
-      <Herolist
-        id={herolistArray[0].id}
-        fullname={herolistArray[0].fullname}
-        name={herolistArray[0].name}
-        work={herolistArray[0].work}
-      />
-      <Herolist
-        id={herolistArray[1].id}
-        fullname={herolistArray[1].fullname}
-        name={herolistArray[1].name}
-        work={herolistArray[1].work}
-      />
-      <Herolist
-        id={herolistArray[2].id}
-        fullname={herolistArray[2].fullname}
-        name={herolistArray[2].name}
-        work={herolistArray[2].work}
-      />
-      <Herolist
-        id={herolistArray[3].id}
-        fullname={herolistArray[3].fullname}
-        name={herolistArray[3].name}
-        work={herolistArray[3].work}
-      />
+      {arrayHeroCard}
 
       <button>Subscribe</button>
     </div>
