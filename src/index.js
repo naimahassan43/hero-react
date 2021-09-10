@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Hero from './components/Hero';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Hero id="1" name="John Smith" work="web developer" />
+    <Hero id="2" name="John Smith" work="web developer" />
+    <Hero id="3" name="John Smith" work="web developer" />
+    <Hero id="4" name="John Smith" work="web developer" />
   </React.StrictMode>,
   document.getElementById('root')
 );
