@@ -4,6 +4,18 @@ import "tachyons";
 import Herolist from "./HeroList.js";
 
 class Hero extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      name: "Welcome to Hero World!",
+    };
+  }
+
+  namechange() {
+    this.setState({
+      name: "Subscribe to My Channel",
+    });
+  }
   render() {
     const herolistArray = [
       {
@@ -35,6 +47,7 @@ class Hero extends React.Component {
     const arrayHeroCard = herolistArray.map((herocard, i) => {
       return (
         <Herolist
+          key={i}
           id={herolistArray[i].id}
           fullname={herolistArray[i].fullname}
           name={herolistArray[i].name}
@@ -45,10 +58,10 @@ class Hero extends React.Component {
 
     return (
       <div className="main-page">
-        <h1>Welcome to Hero World</h1>
+        <h1>{this.state.name}</h1>
         <div>{arrayHeroCard}</div>
 
-        <button>Subscribe</button>
+        <button onClick={() => this.namechange()}>Subscribe</button>
       </div>
     );
   }
